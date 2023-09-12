@@ -3,9 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="org.AutomationExamples.SeleniumTest"/>
-      <class name="org.AutomationExamples.NormalValidationTest"/>
-      <!-- class name="org.AutomationExamples.RestAssuredTest"/> -->
+      <class name="org.LearningMaven.SeleniumTest"/>
+      <class name="org.LearningMaven.NormalValidationTest"/>
+      <!-- class name="org.LearningMaven.RestAssuredTest"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
