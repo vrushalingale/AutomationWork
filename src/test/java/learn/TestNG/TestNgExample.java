@@ -36,7 +36,26 @@ public class TestNgExample {
     public void test5Check(){
         System.out.println("Test 5");
     }
-	
+	@Test(groups = "RegressionTest")
+    public void test6Check(){
+        System.out.println("Test 6");
+    }
+	@Test(groups = "ValidationTest")
+    public void test7Check(){
+        System.out.println("Test 7");
+    }
+	@Test(groups = "VlidationTest")
+    public void test8Check(){
+        System.out.println("Test 8");
+    }
+	@Test(groups = "ValidationTest")
+    public void test9Check(){
+        System.out.println("Test 9");
+    }
+	@Test(groups = "VlidationTest")
+    public void test10Check(){
+        System.out.println("Test 10");
+    }
     @BeforeSuite(alwaysRun = true)
     public void testBeforeSuite() {
         System.out.println("Before Suite.");

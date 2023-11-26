@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-TestNgExampleSuite" class="navigator-link ">
-                    <span>3 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -124,6 +124,21 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestNgExampleSuite" title="learn.TestNG.TestNgExample" class="method navigator-link" hash-for-method="test5Check">test5Check</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestNgExampleSuite" title="learn.TestNG.TestNgExample" class="method navigator-link" hash-for-method="test6Check">test6Check</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestNgExampleSuite" title="learn.TestNG.TestNgExample" class="method navigator-link" hash-for-method="test7Check">test7Check</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestNgExampleSuite" title="learn.TestNG.TestNgExample" class="method navigator-link" hash-for-method="test9Check">test9Check</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TestNgExampleSuite -->
@@ -181,6 +196,27 @@
                   <span class="method-name">test5Check</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test6Check">
+                  </a> <!-- test6Check -->
+                  <span class="method-name">test6Check</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test7Check">
+                  </a> <!-- test7Check -->
+                  <span class="method-name">test7Check</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test9Check">
+                  </a> <!-- test9Check -->
+                  <span class="method-name">test9Check</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-TestNgExampleSuite-class-passed -->
         </div> <!-- panel TestNgExampleSuite -->
@@ -209,7 +245,11 @@
     &lt;parameter name=&quot;param1&quot; value=&quot;Test 1 Done.&quot;/&gt;
     &lt;parameter name=&quot;param2&quot; value=&quot;Test 2 Done.&quot;/&gt;
     &lt;groups&gt;
+      &lt;define name=&quot;SuperGroup&quot;&gt;
+        &lt;include name=&quot;ValidationTest&quot;/&gt;
+      &lt;/define&gt; &lt;!-- SuperGroup --&gt;
       &lt;run&gt;
+        &lt;include name=&quot;SuperGroup&quot;/&gt;
         &lt;include name=&quot;RegressionTest&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
@@ -245,6 +285,10 @@
                 <span class="method-in-group-name">test5Check</span>
                 <br/>
               </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">test6Check</span>
+                <br/>
+              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">Sanity</span>
@@ -270,6 +314,18 @@
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">ValidationTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test7Check</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">test9Check</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-TestNgExampleSuite" class="panel">
@@ -286,32 +342,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'a_test1Check')
 data.setCell(0, 2, 'learn.TestNG.TestNgExample')
-data.setCell(0, 3, 11);
+data.setCell(0, 3, 15);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'b_test1Check')
+data.setCell(1, 1, 'test3Check')
 data.setCell(1, 2, 'learn.TestNG.TestNgExample')
 data.setCell(1, 3, 3);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test4Check')
+data.setCell(2, 1, 'test6Check')
 data.setCell(2, 2, 'learn.TestNG.TestNgExample')
-data.setCell(2, 3, 2);
+data.setCell(2, 3, 3);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'test3Check')
+data.setCell(3, 1, 'test9Check')
 data.setCell(3, 2, 'learn.TestNG.TestNgExample')
-data.setCell(3, 3, 2);
+data.setCell(3, 3, 3);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'test5Check')
 data.setCell(4, 2, 'learn.TestNG.TestNgExample')
 data.setCell(4, 3, 2);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'test4Check')
+data.setCell(5, 2, 'learn.TestNG.TestNgExample')
+data.setCell(5, 3, 2);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'test7Check')
+data.setCell(6, 2, 'learn.TestNG.TestNgExample')
+data.setCell(6, 3, 2);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'b_test1Check')
+data.setCell(7, 2, 'learn.TestNG.TestNgExample')
+data.setCell(7, 3, 1);
 window.suiteTableData['TestNgExampleSuite']= { tableData: data, tableDiv: 'times-div-TestNgExampleSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 ms</span>
+              <span class="suite-total-time">Total running time: 31 ms</span>
               <div id="times-div-TestNgExampleSuite">
               </div> <!-- times-div-TestNgExampleSuite -->
             </div> <!-- times-div -->
@@ -326,9 +394,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-TestNgExampleSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">learn.TestNG.TestNgExample</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">test10Check</span>
+                <br/>
+                <span class="ignored-method-name">test8Check</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-TestNgExampleSuite" class="panel">
@@ -344,83 +421,119 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">testBeforeTest</span>
-                <span class="method-start">30 ms</span>
+                <span class="method-start">45 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">testBeforeClass</span>
-                <span class="method-start">81 ms</span>
+                <span class="method-start">103 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">testBeforeMethod</span>
-                <span class="method-start">102 ms</span>
+                <span class="method-start">123 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">a_test1Check(Test 1 Done.)</span>
-                <span class="method-start">104 ms</span>
+                <span class="method-start">125 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">testAfterMethod</span>
-                <span class="method-start">120 ms</span>
+                <span class="method-start">145 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">testBeforeMethod</span>
-                <span class="method-start">130 ms</span>
+                <span class="method-start">154 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test3Check</span>
-                <span class="method-start">131 ms</span>
+                <span class="method-start">154 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">testAfterMethod</span>
-                <span class="method-start">135 ms</span>
+                <span class="method-start">159 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">testBeforeMethod</span>
-                <span class="method-start">137 ms</span>
+                <span class="method-start">162 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test4Check</span>
-                <span class="method-start">138 ms</span>
+                <span class="method-start">163 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">testAfterMethod</span>
-                <span class="method-start">142 ms</span>
+                <span class="method-start">167 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">testBeforeMethod</span>
-                <span class="method-start">145 ms</span>
+                <span class="method-start">169 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test5Check</span>
-                <span class="method-start">146 ms</span>
+                <span class="method-start">170 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">testAfterMethod</span>
-                <span class="method-start">150 ms</span>
+                <span class="method-start">174 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">testBeforeMethod</span>
-                <span class="method-start">151 ms</span>
+                <span class="method-start">176 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">b_test1Check(Test 2 Done.)</span>
-                <span class="method-start">152 ms</span>
+                <span class="method-name">test6Check</span>
+                <span class="method-start">176 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">testAfterMethod</span>
-                <span class="method-start">157 ms</span>
+                <span class="method-start">183 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testBeforeMethod</span>
+                <span class="method-start">185 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test7Check</span>
+                <span class="method-start">186 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testAfterMethod</span>
+                <span class="method-start">189 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testBeforeMethod</span>
+                <span class="method-start">191 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test9Check</span>
+                <span class="method-start">192 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testAfterMethod</span>
+                <span class="method-start">198 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">testBeforeMethod</span>
+                <span class="method-start">201 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">b_test1Check(Test 2 Done.)</span>
+                <span class="method-start">202 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">testAfterMethod</span>
+                <span class="method-start">204 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">testAfterClass</span>
-                <span class="method-start">159 ms</span>
+                <span class="method-start">206 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">testAfterTest</span>
-                <span class="method-start">160 ms</span>
+                <span class="method-start">208 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">testAfterSuite</span>
-                <span class="method-start">292 ms</span>
+                <span class="method-start">335 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

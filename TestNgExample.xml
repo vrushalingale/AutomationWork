@@ -13,11 +13,15 @@
 
 		<parameter name="param1" value="Test 1 Done." />
 		<parameter name="param2" value="Test 2 Done." />
-		
-		<groups>
-			<run>
-				<include name="RegressionTest" />
 
+		<groups>
+			<define name="SuperGroup">
+				<include name="ValidationTest"></include>
+
+			</define>
+			<run>
+				<include name="SuperGroup" />
+				<include name="RegressionTest" />
 			</run>
 		</groups>
 		<classes>
