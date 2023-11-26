@@ -1,0 +1,62 @@
+This document is stating Test cases designed for learning TestNg.
+
+We are covering 2 scenario's : 1. Vehicle 2. Loan, 
+Below is the hierarchy / breakdown of scenario's
+
+ ----------
+| Vehicles |
+ ----------
+ 
+	-Bike
+		--Moped
+			---Jupiter
+			---Activa
+		--Gear
+			---Royal Enfield 350 Classic
+			---Honda Shine
+	-Car
+		--Manual
+			---Hachback
+			---Sedan
+			---SUV
+			---MUV
+		--Automatic
+			---Hachback
+			---Sedan
+			---SUV
+			---MUV
+	-Truck
+		--Heavy Load
+		--Hard Load
+	-Bus
+		--Seating
+			---Public
+				----AC
+				----Non AC
+			---Private
+				----AC
+				----Non AC
+		--Sleeper
+			---Public
+				----AC
+				----Non AC
+			---Private
+				----AC
+				----Non AC
+	-Train
+		--General
+			---AC
+			---Non AC
+		--Rajdhani
+	-Airplane
+		--Defense
+			---Fighter Jets
+				----High Altitude
+				----Long Range Combat
+			---Load Carriers
+		--Transport Airplane
+			---Public
+				----Economic class
+				----Business class
+			---Private
+				----Personalized Jet
