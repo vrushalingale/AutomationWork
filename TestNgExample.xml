@@ -21,7 +21,7 @@
 			</define>
 			<run>
 				<include name="SuperGroup" />
-				<include name="RegressionTest" />
+				<exclude name="RegressionTest" />
 			</run>
 		</groups>
 		<classes>

@@ -1,5 +1,6 @@
 package learn.TestNG;
 
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -15,80 +16,90 @@ import org.testng.annotations.Test;
 public class TestNgExample {
 
 	@Parameters({"param1"})
-    @Test(priority = 0, groups = "Sanity")
+    @Test(priority = 0, groups = "Sanity", dependsOnMethods = "signIn")
     public void a_test1Check(String param){
-        System.out.println(param);
+        Reporter.log(param);
     }
 	@Parameters({"param2"})
-	@Test(priority = 2, groups = "Sanity")
+	@Test(priority = 2, groups = "Sanity", dependsOnMethods = "signIn")
     public void b_test1Check(String param){
-        System.out.println(param);
+        Reporter.log(param);
     }
-	@Test(groups = "SmokeTest")
+	@Test(groups = "SmokeTest", enabled = false)
     public void test3Check(){
-        System.out.println("Test 3");
+		
+        Reporter.log("Test 3");
     }
-	@Test(groups = "SmokeTest")
+	@Test(priority =-1, groups = "SmokeTest")
     public void test4Check(){
-        System.out.println("Test 4");
+        Reporter.log("Test 4");
     }
 	@Test(groups = "RegressionTest")
     public void test5Check(){
-        System.out.println("Test 5");
+        Reporter.log("Test 5");
     }
 	@Test(groups = "RegressionTest")
     public void test6Check(){
-        System.out.println("Test 6");
+        Reporter.log("Test 6");
     }
 	@Test(groups = "ValidationTest")
     public void test7Check(){
-        System.out.println("Test 7");
+        Reporter.log("Test 7");
     }
-	@Test(groups = "VlidationTest")
+	@Test(groups = "ValidationTest")
     public void test8Check(){
-        System.out.println("Test 8");
+        Reporter.log("Test 8");
     }
 	@Test(groups = "ValidationTest")
     public void test9Check(){
-        System.out.println("Test 9");
+        Reporter.log("Test 9");
     }
-	@Test(groups = "VlidationTest")
+	@Test(groups = "ValidationTest")
     public void test10Check(){
-        System.out.println("Test 10");
+        Reporter.log("Test 10");
+    }
+	@Test
+	public void openBrowser(){
+        Reporter.log("Open Browser");
+    }
+	@Test(dependsOnMethods = "openBrowser")
+	public void signIn(){
+        Reporter.log("Sign In");
+    }
+	@Test(dependsOnGroups = "ValidationTest")
+	public void signOut(){
+        Reporter.log("Sign Out");
     }
     @BeforeSuite(alwaysRun = true)
     public void testBeforeSuite() {
-        System.out.println("Before Suite.");
+        Reporter.log("Before Suite.");
     }
     @BeforeTest(alwaysRun = true)
     public void testBeforeTest() {
-        System.out.println("Before Test.");
+        Reporter.log("Before Test.");
     }
     @BeforeClass(alwaysRun = true)
     public void testBeforeClass() {
-        System.out.println("Before Class.");
+        Reporter.log("Before Class.");
     }
-    
     @BeforeMethod(alwaysRun = true)
     public void testBeforeMethod() {
-        System.out.println("Before Method.");
+        Reporter.log("Before Method.");
     }
     @AfterSuite(alwaysRun = true)
     public void testAfterSuite() {
-        System.out.println("After Suite.");
+        Reporter.log("After Suite.");
     }
     @AfterTest(alwaysRun = true)
     public void testAfterTest() {
-        System.out.println("After Test.");
+        Reporter.log("After Test.");
     }
     @AfterClass(alwaysRun = true)
     public void testAfterClass() {
-        System.out.println("After Class.");
+        Reporter.log("After Class.");
     }
     @AfterMethod(alwaysRun = true)
     public void testAfterMethod() {
-        System.out.println("After Method.");
+        Reporter.log("After Method.");
     }
-    
-    
 }
