@@ -29,14 +29,17 @@ Feature: Title of your feature
     And yet another action
     Then I validate the outcomes
     And check more outcomes
+    And Check for tag Dry Run when true from RunnerFile output should gives null 
 
   @regression
   Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+    Given I want to write a step with "<name>"
+    When I check for the "<value>" in step
+    Then I verify the "<status>" in step
 
     Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+      | name  	| value | status  	|
+      | Vrushal |     5 | success 	|
+      | Pradnya |     7 | success   |
+      | Shreyas |     7 | success   |
+      

@@ -40,19 +40,19 @@ public class SearchTest_StepDef {
 	    System.out.println("@Then(\"check more outcomes\")");
 	}
 
-	@Given("I want to write a step with name1")
-	public void i_want_to_write_a_step_with_name1() {
-	    System.out.println("@Given(\"I want to write a step with name1\")");
+	@Given("I want to write a step with {string}")
+	public void i_want_to_write_a_step_with_name1(String name) {
+	    System.out.println("Name : " + name);
 	}
 
-	@When("I check for the {int} in step")
-	public void i_check_for_the_in_step(Integer int1) {
-	    System.out.println("@When(\"I check for the {int} in step\")");
+	@When("I check for the {string} in step")
+	public void i_check_for_the_in_step(String value) {
+	    System.out.println("Value : " + value);
 	}
 
-	@Then("I verify the success in step")
-	public void i_verify_the_success_in_step() {
-	    System.out.println("@Then(\"I verify the success in step\")");
+	@Then("I verify the {string} in step")
+	public void i_verify_the_success_in_step(String statusValue) {
+	    System.out.println("Status : " + statusValue);
 	}
 
 	@Given("I want to write a step with name2")

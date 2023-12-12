@@ -14,8 +14,11 @@ import io.cucumber.junit.CucumberOptions;
 						"json:target/MyReports/report.json",
 						"junit:target/MyReports/report.xml"
 					 },
-			tags = "@smoke or @regression",
-			publish = true
+			//tags = "@smoke or "@regression",
+					tags = "@regression",
+			publish = true,
+			monochrome = false,
+			dryRun = true
 		)
 
 public class SearchRunnerTest {
