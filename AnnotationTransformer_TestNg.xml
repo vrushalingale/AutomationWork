@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="RetryFailedTests" verbose="1" >
+ <listeners>
+        <listener class-name="learn.TestNG.Listeners.IAnnotationTransformer_impl.AnnotationTransformer"/>
+  </listeners>
+  <test name="RetryMulitple">
+    <classes>
+      <class name="learn.TestNG.Listeners.IAnnotationTransformer_impl.Test_IRetryanalyzer_Failed_Impl01"/>
+    </classes>
+  </test>
+</suite>
