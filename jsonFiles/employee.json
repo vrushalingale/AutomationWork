@@ -1,0 +1,16 @@
+{
+	"firstName" : "Vrushal",
+	"lastName" : "Ingaale",
+	"address" : [
+		{
+			"street" : "Garden Road",
+			"city" : "Bhusawal",
+			"state" :"Maharashtra"
+		},
+		{
+			"street" : "Park Road",
+			"city" : "Pune",
+			"state" :"Maharashtra"
+		}
+	]
+}
