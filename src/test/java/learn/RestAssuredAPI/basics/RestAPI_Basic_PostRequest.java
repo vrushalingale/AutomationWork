@@ -26,6 +26,7 @@ public class RestAPI_Basic_PostRequest {
 		RestAssured.basePath = "/api/users";
 	}
 	
+	//Here we have verified Single content from Response Body like name, job.
 	@Test
 	public void postRequest_CreateUsers() {
 		Response response =
@@ -43,6 +44,7 @@ public class RestAPI_Basic_PostRequest {
 			.and()
 			.log().all()
 			.extract().response();
+		
 		String jsonAsString = response.asString();
 		System.out.println(jsonAsString);
 		
